@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login and Register</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'quotes/styles.css' %}">
+  </head>
+  <body>
+    <div id="container">
+      <h1>Welcome!</h1>
+      <div class="register_form">
+        {% if messages %}
+              {% for message in messages %}
+              <p>{{ message }}</p>
+              {% endfor %}
+        {% endif %}
+        <form action="/process" method="post">
+          {% csrf_token %}
+          <fieldset>
+            <legend>Register</legend>
+              <p>Name: <input type="text" name="name"></p>
+              <p>Alias: <input type="text" name="alias"></p>
+              <p>Email: <input type="text" name="email"></p>
+              <p>Password: <input type="password" name="password"></p>
+              <p>**password must be more than 8 characters</p>
+              <p>Confirm Password: <input type="password" name="pw_confirm"></p>
+              <p>Date of Birth: <input type="date" name="bday" value=""></p>
+              <p><input type="submit" name="submit" value="Submit"></p>
+          </fieldset>
+        </form>
+      </div>
+      <div class="login_form">
+        <form action="/login" method="post">
+          {% csrf_token %}
+          <fieldset>
+            <legend>Login</legend>
+            <p>Email: <input type="text" name="email_login"></p>
+            <p>Password: <input type="password" name="pw_login"></p>
+            <p><input type="submit" name="login" value="Login"></p>
+          </fieldset>
+        </form>
+      </div>
+
+
+    </div>
+  </body>
+</html>

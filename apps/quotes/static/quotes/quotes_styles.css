@@ -1,0 +1,52 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+#container {
+  width: 900px;
+  margin: 50px;
+}
+
+.left_content {
+  width: 400px;
+  height: 700px;
+  border: 1px solid black;
+  overflow-y: scroll;
+  padding: 10px;
+  display: inline-block;
+}
+.right_content {
+  width: 400px;
+  margin-left: 50px;
+  display: inline-block;
+  vertical-align: top;
+}
+.favorites{
+  overflow-y: scroll;
+}
+.post {
+  padding: 15px;
+  width: 315px;
+  border: 1px solid black;
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  position: relative;
+}
+.button {
+  margin-left: 200px;
+  display: inline-block;
+}
+.add_quote {
+  margin-top: 100px;
+}
+span {
+  font-size: 18px;
+  color: red;
+}
+h3 {
+  margin-left: 25px;
+}
+h4 {
+  margin-bottom: 15px;
+}
